@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Source: index.js</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="styles/skyceil.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="utilities">
+        <div id="search">
+            <input type="text" id="search-box" placeholder="Search for stuffs..."><br>
+            <div id="search-results" style="display: none;"></div>
+        </div>
+        <button class="theme" data-theme="light"><i class="fas fa-moon"></i></button>
+    </div>
+    <hr>
+    <h4><a href="index.html">Home</a></h4><h5 class="no-bottom must-underline">Classes</h5><ul><li><span class="small-icon C">C</span><b><a href="Client.html">Client</a></b><ul class="has-class-methods"><li><span class="small-icon F">F</span><a href="Client.html#base64">base64</a></li><li><span class="small-icon F">F</span><a href="Client.html#cat">cat</a></li><li><span class="small-icon F">F</span><a href="Client.html#chatbot">chatbot</a></li><li><span class="small-icon F">F</span><a href="Client.html#deno">deno</a></li><li><span class="small-icon F">F</span><a href="Client.html#discordToken">discordToken</a></li><li><span class="small-icon F">F</span><a href="Client.html#dog">dog</a></li><li><span class="small-icon F">F</span><a href="Client.html#duck">duck</a></li><li><span class="small-icon F">F</span><a href="Client.html#fox">fox</a></li><li><span class="small-icon F">F</span><a href="Client.html#me">me</a></li><li><span class="small-icon F">F</span><a href="Client.html#meme">meme</a></li><li><span class="small-icon F">F</span><a href="Client.html#morseCode">morseCode</a></li><li><span class="small-icon F">F</span><a href="Client.html#npm">npm</a></li><li><span class="small-icon F">F</span><a href="Client.html#pokemon">pokemon</a></li><li><span class="small-icon F">F</span><a href="Client.html#pypi">pypi</a></li><li><span class="small-icon F">F</span><a href="Client.html#reverse">reverse</a></li><li><span class="small-icon F">F</span><a href="Client.html#roast">roast</a></li><li><span class="small-icon F">F</span><a href="Client.html#stats">stats</a></li><li><span class="small-icon F">F</span><a href="Client.html#tokeninfo">tokeninfo</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    <div class="burger">
+        <div class="burger-line-1"></div>
+        <div class="burger-line-2"></div>
+        <div class="burger-line-3"></div>
+    </div>
+
+    <h1 class="page-title">Source: index.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>"use strict";
+var __importDefault = (this &amp;&amp; this.__importDefault) || function (mod) {
+    return (mod &amp;&amp; mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Constants = exports.Client = void 0;
+const fs_1 = require("fs");
+const node_fetch_1 = __importDefault(require("node-fetch"));
+const Constants_1 = require("./Constants");
+Object.defineProperty(exports, "Constants", { enumerable: true, get: function () { return Constants_1.Constants; } });
+class Client {
+    /**
+     * Creates new api client
+     * @param token API key
+     */
+    constructor(token) {
+      
+        this.BASE_URL = Constants_1.Constants.BASE_URL;
+        if (!token &amp;&amp; typeof process.env.SNOWAPI_TOKEN === "string") {
+            Object.defineProperty(this, "token", {
+                value: process.env.SNOWAPI_TOKEN
+            });
+        }
+        else if (!token) {
+            throw new Error("Token was not provided to the client!");
+        }
+        else {
+            Object.defineProperty(this, "token", {
+                value: token
+            });
+        }
+    }
+    /**
+     * Returns meme object
+     * @param {string} sbr Subreddit
+     */
+    async meme(sbr) {
+        const response = await this._request(`meme${!!sbr &amp;&amp; typeof sbr === "string" ? `?sbr=${encodeURIComponent(sbr)}` : ""}`, "JSON");
+        const data = {
+            ...response,
+            createdAt: response.createdAt instanceof Date ? response.createdAt : new Date(response.createdAt)
+        };
+        return data;
+    }
+    /**
+     * Returns fake discord bot token
+     */
+    async discordToken() {
+        const response = await this._request("token", "JSON");
+        return response.token || "";
+    }
+    /**
+     * AI chatbot
+     * @param {object} options The options
+     * @param {string} options.name The name of the chatbot
+     * @param {string} options.gender The gender of the chatbot
+     * @param {string} options.message The message of the chatbot
+     * @param {string} options.user The user id of the user
+     * @returns {Promise&lt;String>} The message by the chatbot
+     */
+    async chatbot(options) {
+        const { name, gender, message, user } = options;
+        if (!message)
+            throw new Error("missing message for chatbot");
+        const chatbotparams = () => {
+            let u = "";
+            if (!!name)
+                u += `&amp;name=${encodeURIComponent(name)}`;
+            if (!!gender)
+                u += `&amp;gender=${encodeURIComponent(gender)}`;
+            if (!!user)
+                u += `&amp;user=${encodeURIComponent(user)}`;
+            return u;
+        };
+        const response = await this._request(`chatbot?message=${encodeURIComponent(message)}${chatbotparams()}`, "JSON");
+        return response.message || "sorry, I can't understand.";
+    }
+    /**
+     * Random cat image
+     */
+    async cat() {
+        const res = await this._request("cat", "BUFFER");
+        return res;
+    }
+    /**
+     * Random dog image
+     */
+    async dog() {
+        const res = await this._request("dog", "BUFFER");
+        return res;
+    }
+    /**
+     * Random duck image
+     */
+    async duck() {
+        const res = await this._request("duck", "BUFFER");
+        return res;
+    }
+    /**
+     * Random fox image
+     */
+    async fox() {
+        const res = await this._request("fox", "BUFFER");
+        return res;
+    }
+    /**
+     * Random roast
+     */
+    async roast() {
+        const res = await this._request("cat", "JSON");
+        return res.roast || "";
+    }
+    /**
+     * Pokemon info
+     * @param {string} name Pokemon name or id
+     */
+    async pokemon(name) {
+        const res = await this._request(`pokemon?name=${name}`, "JSON");
+        return res;
+    }
+    /**
+     * Morse code encoder/decoder
+     * @param {string} data message to encode/decode
+     * @param {string} type ENCODE or DECODE
+     */
+    async morseCode(data, type) {
+        const res = await this._request(`morse/${type === "DECODE" ? "decode" : "encode"}?text=${data}`, "JSON");
+        return res.data || "";
+    }
+    /**
+     * get package information from deno registry
+     * @param {string} moduleName Module name
+     */
+    async deno(moduleName) {
+        const res = await this._request(`/registry/deno?module=${moduleName}`, "JSON");
+        return res;
+    }
+    /**
+     * get package information from npm registry
+     * @param {string} moduleName Module name
+     */
+    async npm(moduleName) {
+        const res = await this._request(`/registry/npm?module=${moduleName}`, "JSON");
+        return res;
+    }
+    /**
+     * get package information from pypi registry
+     * @param {string} moduleName Module name
+     */
+    async pypi(moduleName) {
+        const res = await this._request(`/registry/pypi?module=${moduleName}`, "JSON");
+        return res;
+    }
+    /**
+     * Reverse a message
+     * @param {string} message Message to reverse
+     */
+    async reverse(message) {
+        const res = await this._request(`/reverse?message=${message}`, "JSON");
+        return res.message || "";
+    }
+    /**
+     * Returns discord bot token information
+     * @param {string} token Discord bot token
+     */
+    async tokeninfo(token) {
+        const res = await this._request(`/tokeninfo?token=${token}`, "JSON");
+        return res;
+    }
+    /**
+     * Returns API stats
+     */
+    async stats() {
+        const res = await this._request("/stats", "JSON");
+        return res;
+    }
+    /**
+     * Returns current user info
+     */
+    async me() {
+        const res = await this._request("/me", "JSON");
+        return res;
+    }
+    /**
+     * Base64 encoder/decoder
+     * @param {string} data message to encode/decode
+     * @param {string} type ENCODE or DECODE
+     */
+    async base64(data, type) {
+        const res = await this._request(`base64/${type === "DECODE" ? "decode" : "encode"}?data=${data}`, "JSON");
+        return res.data || "";
+    }
+    _request(path, type) {
+        return node_fetch_1.default(`${this.BASE_URL}/api/${path}`, {
+            headers: {
+                "Authorization": this.token
+            }
+        })
+            .then(async (res) => {
+            if (res.status !== 200) {
+                let json;
+                try {
+                    json = await res.json();
+                }
+                catch (e) { }
+                if (res.status >= 500)
+                    throw new Error(`[API_INTERNAL_ERROR_${res.status}] ${json &amp;&amp; json.error || res.statusText}`);
+                switch (res.status) {
+                    case 400:
+                    case 401:
+                    case 403:
+                    case 404:
+                    case 429:
+                        throw new Error(`[API_ERROR_${res.status}] ${json &amp;&amp; json.error || res.statusText}`);
+                }
+            }
+            return type === "BUFFER" ? res.buffer() : res.json();
+        })
+            .then(res => {
+            if (res.error)
+                throw new Error(`[API_ERROR] ${res.error}`);
+            return res;
+        });
+    }
+    static get version() {
+        const path = `${__dirname}/../package.json`;
+        const raw = fs_1.readFileSync(path, "utf-8");
+        const json = JSON.parse(raw);
+        return json["version"];
+    }
+}
+exports.Client = Client;
+exports.default = Client;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon Jan 04 2021 09:33:41 GMT+0530 (India Standard Time) using <a href="https://github.com/devsnowflake/jsdoc-skyceil">Skyceil Theme</a>
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+
+</body>
+</html>

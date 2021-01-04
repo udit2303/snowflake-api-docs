@@ -1,0 +1,2555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Class: Client</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="styles/skyceil.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="utilities">
+        <div id="search">
+            <input type="text" id="search-box" placeholder="Search for stuffs..."><br>
+            <div id="search-results" style="display: none;"></div>
+        </div>
+        <button class="theme" data-theme="light"><i class="fas fa-moon"></i></button>
+    </div>
+    <hr>
+    <h4><a href="index.html">Home</a></h4><h5 class="no-bottom must-underline">Classes</h5><ul><li><span class="small-icon C">C</span><b><a href="Client.html">Client</a></b><ul class="has-class-methods"><li><span class="small-icon F">F</span><a href="Client.html#base64">base64</a></li><li><span class="small-icon F">F</span><a href="Client.html#cat">cat</a></li><li><span class="small-icon F">F</span><a href="Client.html#chatbot">chatbot</a></li><li><span class="small-icon F">F</span><a href="Client.html#deno">deno</a></li><li><span class="small-icon F">F</span><a href="Client.html#discordToken">discordToken</a></li><li><span class="small-icon F">F</span><a href="Client.html#dog">dog</a></li><li><span class="small-icon F">F</span><a href="Client.html#duck">duck</a></li><li><span class="small-icon F">F</span><a href="Client.html#fox">fox</a></li><li><span class="small-icon F">F</span><a href="Client.html#me">me</a></li><li><span class="small-icon F">F</span><a href="Client.html#meme">meme</a></li><li><span class="small-icon F">F</span><a href="Client.html#morseCode">morseCode</a></li><li><span class="small-icon F">F</span><a href="Client.html#npm">npm</a></li><li><span class="small-icon F">F</span><a href="Client.html#pokemon">pokemon</a></li><li><span class="small-icon F">F</span><a href="Client.html#pypi">pypi</a></li><li><span class="small-icon F">F</span><a href="Client.html#reverse">reverse</a></li><li><span class="small-icon F">F</span><a href="Client.html#roast">roast</a></li><li><span class="small-icon F">F</span><a href="Client.html#stats">stats</a></li><li><span class="small-icon F">F</span><a href="Client.html#tokeninfo">tokeninfo</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    <div class="burger">
+        <div class="burger-line-1"></div>
+        <div class="burger-line-2"></div>
+        <div class="burger-line-3"></div>
+    </div>
+
+    <h1 class="page-title">Class: Client</h1>
+
+    
+
+
+
+
+<section>
+<header>
+    <hr>
+    
+        <h2><span class="attribs"><span class="type-signature"></span></span>Client<span class="signature">(token)</span><span class="type-signature"></span></h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    
+    <h4 class="name" id="Client"><span class="type-signature"></span>new Client<span class="signature">(token)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Creates new api client
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>token</code></td>
+                
+
+                <td class="type">
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">API key</td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line16">line 16</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="base64"><span class="type-signature">(async) </span>base64<span class="signature">(data, type)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Base64 encoder/decoder
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>data</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">message to encode/decode</td>
+            </tr>
+
+        
+
+            <tr>
+                
+                    <td class="name"><code>type</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">ENCODE or DECODE</td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line189">line 189</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="cat"><span class="type-signature">(async) </span>cat<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Random cat image
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line81">line 81</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="chatbot"><span class="type-signature">(async) </span>chatbot<span class="signature">(options)</span><span class="type-signature"> &rarr; {Promise.&lt;String>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    AI chatbot
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>options</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">object</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">The options
+                    <h6>Properties</h6>
+                    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>name</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">The name of the chatbot</td>
+            </tr>
+
+        
+
+            <tr>
+                
+                    <td class="name"><code>gender</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">The gender of the chatbot</td>
+            </tr>
+
+        
+
+            <tr>
+                
+                    <td class="name"><code>message</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">The message of the chatbot</td>
+            </tr>
+
+        
+
+            <tr>
+                
+                    <td class="name"><code>user</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">The user id of the user</td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+                </td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line61">line 61</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The message by the chatbot
+</div>
+
+
+
+<ul>
+    <li>
+        Type: <span class="simple-code">
+<span class="param-type">Promise.&lt;String></span>
+
+</span>
+    </li>
+</ul>
+
+    
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="deno"><span class="type-signature">(async) </span>deno<span class="signature">(moduleName)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    get package information from deno registry
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>moduleName</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">Module name</td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line134">line 134</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="discordToken"><span class="type-signature">(async) </span>discordToken<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Returns fake discord bot token
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line48">line 48</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="dog"><span class="type-signature">(async) </span>dog<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Random dog image
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line88">line 88</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="duck"><span class="type-signature">(async) </span>duck<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Random duck image
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line95">line 95</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="fox"><span class="type-signature">(async) </span>fox<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Random fox image
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line102">line 102</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="me"><span class="type-signature">(async) </span>me<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Returns current user info
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line180">line 180</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="meme"><span class="type-signature">(async) </span>meme<span class="signature">(sbr)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Returns meme object
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>sbr</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">Subreddit</td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="morseCode"><span class="type-signature">(async) </span>morseCode<span class="signature">(data, type)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Morse code encoder/decoder
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>data</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">message to encode/decode</td>
+            </tr>
+
+        
+
+            <tr>
+                
+                    <td class="name"><code>type</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">ENCODE or DECODE</td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line126">line 126</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="npm"><span class="type-signature">(async) </span>npm<span class="signature">(moduleName)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    get package information from npm registry
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>moduleName</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">Module name</td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line142">line 142</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="pokemon"><span class="type-signature">(async) </span>pokemon<span class="signature">(name)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Pokemon info
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>name</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">Pokemon name or id</td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line117">line 117</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="pypi"><span class="type-signature">(async) </span>pypi<span class="signature">(moduleName)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    get package information from pypi registry
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>moduleName</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">Module name</td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line150">line 150</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="reverse"><span class="type-signature">(async) </span>reverse<span class="signature">(message)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Reverse a message
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>message</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">Message to reverse</td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line158">line 158</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="roast"><span class="type-signature">(async) </span>roast<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Random roast
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line109">line 109</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="stats"><span class="type-signature">(async) </span>stats<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Returns API stats
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line173">line 173</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+            
+
+    
+
+    
+    <h4 class="name" id="tokeninfo"><span class="type-signature">(async) </span>tokeninfo<span class="signature">(token)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Returns discord bot token information
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<div class="table-box">
+    <table class="params">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            <tr>
+                
+                    <td class="name"><code>token</code></td>
+                
+
+                <td class="type">
+                
+                    
+<span class="param-type">string</span>
+
+
+                
+                </td>
+
+                
+
+                
+
+                <td class="description last">Discord bot token</td>
+            </tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line166">line 166</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon Jan 04 2021 09:33:41 GMT+0530 (India Standard Time) using <a href="https://github.com/devsnowflake/jsdoc-skyceil">Skyceil Theme</a>
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+
+</body>
+</html>

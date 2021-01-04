@@ -27,7 +27,7 @@
         <button class="theme" data-theme="light"><i class="fas fa-moon"></i></button>
     </div>
     <hr>
-    <h4><a href="index.html">Home</a></h4><h5 class="no-bottom must-underline">Classes</h5><ul><li><span class="small-icon C">C</span><b><a href="API.html">API</a></b><ul class="has-class-methods"><li><span class="small-icon F">F</span><a href="API.html#base64">base64</a></li><li><span class="small-icon F">F</span><a href="API.html#base64">base64</a></li><li><span class="small-icon F">F</span><a href="API.html#cat">cat</a></li><li><span class="small-icon F">F</span><a href="API.html#cat">cat</a></li><li><span class="small-icon F">F</span><a href="API.html#chatbot">chatbot</a></li><li><span class="small-icon F">F</span><a href="API.html#chatbot">chatbot</a></li><li><span class="small-icon F">F</span><a href="API.html#dog">dog</a></li><li><span class="small-icon F">F</span><a href="API.html#dog">dog</a></li><li><span class="small-icon F">F</span><a href="API.html#duck">duck</a></li><li><span class="small-icon F">F</span><a href="API.html#duck">duck</a></li><li><span class="small-icon F">F</span><a href="API.html#fox">fox</a></li><li><span class="small-icon F">F</span><a href="API.html#fox">fox</a></li><li><span class="small-icon F">F</span><a href="API.html#me">me</a></li><li><span class="small-icon F">F</span><a href="API.html#me">me</a></li><li><span class="small-icon F">F</span><a href="API.html#meme">meme</a></li><li><span class="small-icon F">F</span><a href="API.html#meme">meme</a></li><li><span class="small-icon F">F</span><a href="API.html#morse">morse</a></li><li><span class="small-icon F">F</span><a href="API.html#morse">morse</a></li><li><span class="small-icon F">F</span><a href="API.html#pokemon">pokemon</a></li><li><span class="small-icon F">F</span><a href="API.html#pokemon">pokemon</a></li><li><span class="small-icon F">F</span><a href="API.html#registry">registry</a></li><li><span class="small-icon F">F</span><a href="API.html#registry">registry</a></li><li><span class="small-icon F">F</span><a href="API.html#reverse">reverse</a></li><li><span class="small-icon F">F</span><a href="API.html#reverse">reverse</a></li><li><span class="small-icon F">F</span><a href="API.html#roast">roast</a></li><li><span class="small-icon F">F</span><a href="API.html#roast">roast</a></li><li><span class="small-icon F">F</span><a href="API.html#token">token</a></li><li><span class="small-icon F">F</span><a href="API.html#token">token</a></li><li><span class="small-icon F">F</span><a href="API.html#tokeninfo">tokeninfo</a></li><li><span class="small-icon F">F</span><a href="API.html#tokeninfo">tokeninfo</a></li></ul></li></ul>
+    <h4><a href="index.html">Home</a></h4><h5 class="no-bottom must-underline">Classes</h5><ul><li><span class="small-icon C">C</span><b><a href="Client.html">Client</a></b><ul class="has-class-methods"><li><span class="small-icon F">F</span><a href="Client.html#base64">base64</a></li><li><span class="small-icon F">F</span><a href="Client.html#cat">cat</a></li><li><span class="small-icon F">F</span><a href="Client.html#chatbot">chatbot</a></li><li><span class="small-icon F">F</span><a href="Client.html#deno">deno</a></li><li><span class="small-icon F">F</span><a href="Client.html#discordToken">discordToken</a></li><li><span class="small-icon F">F</span><a href="Client.html#dog">dog</a></li><li><span class="small-icon F">F</span><a href="Client.html#duck">duck</a></li><li><span class="small-icon F">F</span><a href="Client.html#fox">fox</a></li><li><span class="small-icon F">F</span><a href="Client.html#me">me</a></li><li><span class="small-icon F">F</span><a href="Client.html#meme">meme</a></li><li><span class="small-icon F">F</span><a href="Client.html#morseCode">morseCode</a></li><li><span class="small-icon F">F</span><a href="Client.html#npm">npm</a></li><li><span class="small-icon F">F</span><a href="Client.html#pokemon">pokemon</a></li><li><span class="small-icon F">F</span><a href="Client.html#pypi">pypi</a></li><li><span class="small-icon F">F</span><a href="Client.html#reverse">reverse</a></li><li><span class="small-icon F">F</span><a href="Client.html#roast">roast</a></li><li><span class="small-icon F">F</span><a href="Client.html#stats">stats</a></li><li><span class="small-icon F">F</span><a href="Client.html#tokeninfo">tokeninfo</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -64,70 +64,37 @@
 
     <hr>
     <section>
-        <article><h1>Snowflake-API</h1>
-<p>Quick <a href="https://api.snowflakedev.cf:9019">Snowflake API</a> wrapper for beginners.</p>
+        <article><h1>Snowflake API</h1>
+<p>Official API client for <strong>snowflake-api</strong>.</p>
 <p><img src="https://nodei.co/npm/snowflake-api.png" alt="Snowflake-API"></p>
-<h1>Features</h1>
-<ul>
-<li>
-<p>Beginner friendly</p>
-</li>
-<li>
-<p>Easy to use</p>
-</li>
-<li>
-<p>Asynchronous</p>
-</li>
-</ul>
-<h1>Quick Example</h1>
-<pre class="prettyprint linenums source lang-js"><code>
-const { API } =  require(&quot;snowflake-api&quot;);
+<h1>Example</h1>
+<pre class="prettyprint linenums source lang-js"><code>const { Client } = require(&quot;snowflake-api&quot;);
+// import Client from &quot;snowflake-api&quot; or import { Client } from &quot;snowflake-api&quot;
 
-const  api  =  new  API(&quot;Super Secret API Token&quot;);
+const client = new Client(&quot;API_KEY&quot;);
 
-  
+client.me().then(console.log); // user info
 
-api.chatbot(&quot;Hello There&quot;).then(console.log);
-
-  
-api.morse(&quot;Test&quot;).then(console.log);
-
-
-api.on(&quot;error&quot;, error => {
-			console.log(error);
-		});
-
-
+/*
+{
+  user: '480933736276426763',
+  pro: true,
+  ratelimits: 5000,
+  banned: false,
+  requests: '36',
+  tokenCreatedTimestamp: 1608371383745,
+  createdTimestamp: 1606890937906
+}
+*/
 </code></pre>
-<h1>Functions</h1>
-<p><strong>NOTE:</strong> Parameters with <code>&lt;&gt;</code> are compulsory while those with <code>[]</code> are optional</p>
-<p><code>chatbot(&lt;message&gt;, [name], [gender], [userid])</code> - Returns message sent by the Chatbot</p>
-<p>Default values: <code>name</code>: Chatbot, <code>gender</code>: female, <code>userid</code>: 1</p>
-<p><code>token()</code> - Returns random Discord Token <em>(Note: This token is not valid)</em></p>
-<p><code>meme(subreddit)</code> - Returns a meme from reddit <em>(subreddit is optional)</em></p>
-<p><code>cat()</code> - Returns buffer for an image of cat</p>
-<p><code>dog()</code> - Returns buffer for an image of dog</p>
-<p><code>fox()</code> - Returns buffer for an image of fox</p>
-<p><code>duck()</code> - Returns buffer for an image of duck</p>
-<p><code>roast()</code> - Returns a roast in the from of a string</p>
-<p><code>pokemon(&lt;name&gt;)</code> - Returns an object containing information about the Pokemon</p>
-<p><code>morse(&lt;message&gt;,type[encode/decode])</code>- Returns Morse Code encoded or decoded <em>(<code>type</code> specified must be either as <code>encode</code> or <code>decode</code>. Default value is <code>encode</code>)</em></p>
-<p><code>registry(&lt;name&gt;, &lt;registry&gt;)</code> - Returns a package registry from the desired registry <em>(Registry must be one of the following: npm, deno, pypi)</em></p>
-<p><code>reverse(&lt;message&gt;)</code> - Returns the message reversed</p>
-<p><code>tokeninfo(&lt;token&gt;)</code> - Returns the info about user from the token <em>(Note: token isn't stored anywhere)</em></p>
-<p><code>base64(&lt;message&gt;, type[encode/decode])</code> - Returns base64 encoded/decoded message <em>(<code>type</code> specified must be either as <code>encode</code> or <code>decode</code>, default value is <code>encode</code>)</em></p>
-<p><code>me()</code> - Returns info about user from token provided</p>
-<h1>Events</h1>
-<p><code>error</code> - Returns an error if an error is returned from the API.</p>
 <h1>Links</h1>
 <ul>
-<li>
-<p><strong><a href="https://discord.gg/QTxmjwENQx">Discord Support Server</a></strong></p>
-</li>
-<li>
-<p><strong><a href="https://github.com/DevSnowflake/snowflake-api">GitHub</a></strong></p>
-</li>
-</ul></article>
+<li><strong><a href="https://snowflake-api.js.org">Documentation</a></strong></li>
+<li><strong><a href="https://discord.gg/2SUybzb">Discord Support Server</a></strong></li>
+<li><strong><a href="https://github.com/DevSnowflake/snowflake-api">GitHub</a></strong></li>
+</ul>
+<h1>Discord Server</h1>
+<p><a href="https://discord.gg/2SUybzb"><img src="https://i.imgur.com/f6hNUfc.png" alt=""></a></p></article>
     </section>
 
 
@@ -141,7 +108,7 @@ api.on(&quot;error&quot;, error => {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sat Dec 19 2020 16:14:43 GMT+0530 (India Standard Time) using <a href="https://github.com/devsnowflake/jsdoc-skyceil">Skyceil Theme</a>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Mon Jan 04 2021 09:33:41 GMT+0530 (India Standard Time) using <a href="https://github.com/devsnowflake/jsdoc-skyceil">Skyceil Theme</a>
 </footer>
 
 <script>prettyPrint();</script>
